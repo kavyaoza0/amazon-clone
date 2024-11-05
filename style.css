@@ -288,39 +288,81 @@ ul a{
 
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
     body {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
+        flex-direction: column; /* Stack elements vertically */
         height: auto; /* Allow height to adjust based on content */
-        align-items: center; /* Center items */
         padding: 10px; /* Add some padding */
     }
 
     .logo {
         width: 80%; /* Make logo responsive */
         height: auto; /* Maintain aspect ratio */
-        max-width: 100px; /* Limit max width */
-        margin-bottom: 10px; /* Add spacing below logo */
+        margin-bottom: 15px; /* Space below logo */
     }
 
     ul a {
-        font-size: 1rem; /* Increase font size for better readability */
+        font-size: 1rem; /* Increase font size for readability */
         margin-top: 5px; /* Reduce margin for smaller screens */
     }
 
-    .foot-panel3, .foot-panel4 {
-        height: auto; /* Allow panels to adjust height based on content */
+    .foot-panel4, .foot-panel3 {
+        height: auto; /* Allow foot panels to adjust based on content */
         padding: 10px; /* Add padding for better spacing */
-        flex-direction: column; /* Stack items vertically in foot panels */
-        align-items: center; /* Center items in foot panels */
-        text-align: center; /* Center text in foot panels */
+        font-size: 0.9rem; /* Slightly larger font size */
     }
 }
 
-@media (max-width: 480px) {
-    .pages, .copyright {
-        font-size: 0.6rem; /* Further reduce font size for very small screens */
-        padding-top: 10px; /* Adjust padding for smaller screens */
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        flex-direction: row; /* Maintain row layout */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add some padding */
     }
+
+    .logo {
+        width: 70%; /* Adjust logo size for tablets */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space below logo */
+    }
+
+    ul a {
+        font-size: 0.9rem; /* Slightly larger font size for tablets */
+        margin-top: 8px; /* Adjust margin for medium screens */
+    }
+
+    .foot-panel4, .foot-panel3 {
+        height:auto; /* Allow foot panels to adjust based on content */
+        padding: 15px; /* Add padding for better spacing */
+        font-size: 0.8rem; /* Slightly larger font size */
+    }
+}
+
+/* Desktops and Larger Screens */
+@media (min-width: 1025px) {
+   body {
+       flex-direction: row; /* Keep row layout for larger screens */
+       height:auto; /* Allow height to adjust based on content */
+       padding:30px; /* Add more padding for larger screens */
+   }
+
+   .logo {
+       width:100px; /* Original logo size for desktop */
+       height:auto; /* Maintain aspect ratio */
+   }
+
+   ul a {
+       font-size:.85rem; /* Keep original font size for desktops */
+   }
+
+   .foot-panel4, .foot-panel3 {
+       height:auto; /* Allow foot panels to adjust based on content */
+       padding :20px ;/* Add padding for better spacing on larger screens*/
+       font-size:.7rem ;/* Keep original font size for desktops*/
+   }
 }
